@@ -23,7 +23,7 @@
             margin-bottom: 100/16rem;
             border-radius: 5/16rem;
             position: relative;
-            background: #fff;
+            background: var(--medium);
             display: flex;
             flex-direction: column;
             &:last-of-type {
@@ -58,7 +58,7 @@
                 margin-top: auto;
 
                 .name {
-                    color: #1A1A1A;
+                    color: #fff;
                     line-height: 24/16rem;
                     text-align: left;
                     font-weight: bold;
@@ -66,9 +66,10 @@
                 }
 
                 .desc {
-                    color: #575757;
+                    color: #fff;
                     font-weight: 400;
                     display: block;
+                    opacity: .7;
                 }
 
                 img {
@@ -109,26 +110,6 @@
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #reviews {
-            .review {
-                background: var(--medium);
-
-                .name {
-                    color: #fff;
-                }
-
-                .desc {
-                    color: #fff;
-                    opacity: .7;
-                }
-            }
-        }
-    }
-}
-
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
 <--- -------------------------- -*/
@@ -150,6 +131,10 @@
             top: 0;
             left: 0;
             z-index: -1;
+        }
+
+        &:after {
+            display: none;
         }
 
         .container {
@@ -215,7 +200,7 @@
         &:after {
             content: '';
             position: absolute;
-            display: block;
+            display: none;
             height: 1108/16rem;
             width: 2000/16rem;
             background: url("/assets/svgs/cta-squares.svg");
@@ -249,17 +234,6 @@
                 top: 0;
                 left: 0;
                 z-index: 1;
-            }
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #cta {
-            &:after {
-                display: none;
             }
         }
     }

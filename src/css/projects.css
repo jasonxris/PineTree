@@ -105,6 +105,9 @@
     left: 0;
     z-index: -1;
   }
+  #cta:after {
+    display: none;
+  }
   #cta .container {
     text-align: center;
   }
@@ -161,7 +164,7 @@
   #cta:after {
     content: '';
     position: absolute;
-    display: block;
+    display: none;
     height: 69.25rem;
     width: 125rem;
     background: url("/assets/svgs/cta-squares.svg");
@@ -194,11 +197,5 @@
     top: 0;
     left: 0;
     z-index: 1;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #cta:after {
-    display: none;
   }
 }
