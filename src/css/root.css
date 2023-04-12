@@ -5,7 +5,6 @@
 @media only screen and (min-width: 0em) {
   :root {
     --primary: #BC985A;
-    --primaryShade: #CAA45C;
     --primaryDark: #CAA45C;
     --bodyTextColor: #4E4B66;
     --bodyTextColorWhite: #FAFBFC;
