@@ -26,6 +26,9 @@
             width: 631/16em;
             height: 636/16em;
             position: relative;
+            &:before, &:after {
+                background: var(--accent);
+            }
         }
 
         .cs-picture {
@@ -55,10 +58,10 @@
         .cs-picture2 {
             width: 414/16em;
             height: 400/16em;
-            background-color: #fff;
+            background-color: var(--dark);
             box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
             /* 6px - 12px */
-            border: clamp(.375em, 1.5vw, .75em) solid #fff;
+            border: clamp(.375em, 1.5vw, .75em) solid var(--dark);
             right: 0;
             bottom: 0;
         }
@@ -75,7 +78,7 @@
             text-align: left;
             letter-spacing: .1em;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--primaryLight);
             margin-bottom: 4/16rem;
             display: block;
         }
@@ -87,7 +90,7 @@
             text-align: left;
             max-width: 800/16rem;
             margin: 0 auto 16/16rem;
-            color: var(--headerColor);
+            color: var(--bodyTextColorWhite);
             position: relative;
         }
 
@@ -99,17 +102,21 @@
             max-width: 750/16rem;
             margin: 0 auto;
             margin-bottom: 16/16rem;
-            color: var(--bodyTextColor);
+            color: var(--bodyTextColorWhite);
 
             &:last-of-type {
                 margin-bottom: 32/16rem;
             }
         }
 
+        .cs-h3 {
+            color: var(--bodyTextColorWhite);
+        }
+
         .cs-flex-group {
             /* 16px - 32px */
             padding: clamp(1rem, 3vw, 2rem);
-            background-color: #F7F7F7;
+            background-color: var(--accent);
             border-radius: 16/16rem;
             position: relative;
         }
@@ -119,7 +126,7 @@
             font-size: clamp(.875rem, 1.5vw, 1rem);
             line-height: 1.5em;
             margin: 0 0 16/16rem;
-            color: #767676;
+            color: var(--bodyTextColorWhite);
         }
 
         .cs-name {
@@ -128,15 +135,16 @@
             text-transform: uppercase;
             font-weight: bold;
             margin: 0 0 4/16rem;
-            color: var(--headerColor);
+            color: var(--bodyTextColorWhite);
             display: block;
         }
 
         .cs-job {
             font-size: 14/16rem;
             line-height: 1.5em;
-            color: #767676;
+            color: var(--bodyTextColorWhite);
             display: block;
+            opacity: .8;
         }
 
         .cs-quote-icon {
@@ -147,6 +155,7 @@
             bottom: 0/16rem;
             /* 16px - 32px */
             right: clamp(1rem, 4vw, 2rem);
+            opacity: .2;
         }
 
         .button-solid {
@@ -175,47 +184,6 @@
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #sbs {
-
-            .cs-left {
-                &:before, &:after {
-                    background: var(--accent);
-                }
-            }
-
-            .cs-picture2 {
-                background-color: var(--dark);
-                /* 6px - 12px */
-                border: clamp(.375em, 1.5vw, .75em) solid var(--dark);
-            }
-
-            .cs-topper {
-                color: var(--primaryLight)
-            }
-
-            .cs-title, .cs-text, .cs-h3, .cs-flex-p, .cs-name {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-flex-group {
-                background-color: var(--accent);
-            }
-
-            .cs-job {
-                color: var(--bodyTextColorWhite);
-                opacity: .8;
-            }
-
-            .cs-quote-icon {
-                opacity: .2;
-            }
-        }
-    }
-}
-
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
 <--- -------------------------- -*/
@@ -237,6 +205,9 @@
             top: 0;
             left: 0;
             z-index: -1;
+        }
+        &:after {
+            display: none;
         }
 
         .container {
@@ -302,7 +273,7 @@
         &:after {
             content: '';
             position: absolute;
-            display: block;
+            display: none;
             height: 1108/16rem;
             width: 2000/16rem;
             background: url("/assets/svgs/cta-squares.svg");
@@ -336,17 +307,6 @@
                 top: 0;
                 left: 0;
                 z-index: 1;
-            }
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #cta {
-            &:after {
-                display: none;
             }
         }
     }

@@ -5,6 +5,24 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
+    body {
+        #services {
+            background: var(--medium);
+
+            picture {
+                background: var(--primaryDark);
+            }
+
+            h2 {
+                color: #fff;
+                font-weight: bold;
+            }
+            h1 {
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+    }
 
     #hero {
         font-family: 'Roboto', 'Arial', sans-serif;
@@ -17,6 +35,12 @@
         z-index: 1;
         /* prevents overflow from the lines extending past the screen width */
         overflow: hidden;
+
+        .cs-background {
+            &:before {
+                opacity: .8;
+            }
+        }
 
         .cs-picture {
             /* Background Image */
@@ -265,19 +289,6 @@
         background-attachment: fixed;
     }
 }
-
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #hero {
-            .cs-background {
-                &:before {
-                    opacity: .8;
-                }
-            }
-        }
-    }
-}
                                 
 /*-- -------------------------- -->
 <---          Services          -->
@@ -374,28 +385,6 @@
 
         .card {
             max-width: 357/16em;
-        }
-    }
-}
-
-/* Dark mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #services {
-            background: var(--medium);
-
-            picture {
-                background: var(--primaryDark);
-            }
-
-            h2 {
-                color: #fff;
-                font-weight: bold;
-            }
-            h1 {
-                color: #fff;
-                font-weight: bold;
-            }
         }
     }
 }

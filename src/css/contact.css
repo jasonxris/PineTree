@@ -44,7 +44,7 @@
     text-align: left;
     max-width: 50rem;
     margin: 0 auto 1rem 0;
-    color: var(--headerColor);
+    color: var(--bodyTextColorWhite);
     position: relative;
   }
   #cs-contact .cs-text {
@@ -57,7 +57,7 @@
     margin: 0 auto 0 0;
     /* 40px - 48px */
     margin-bottom: clamp(2.5rem, 6.3vw, 3rem);
-    color: var(--bodyTextColor);
+    color: var(--bodyTextColorWhite);
   }
   #cs-contact #cs-form {
     margin-bottom: 2.5rem;
@@ -73,6 +73,8 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    background-color: transparent;
+    color: var(--bodyTextColorWhite);
   }
   #cs-contact #cs-form .cs-label-message {
     /* 32px - 48px */
@@ -90,10 +92,18 @@
     /* prevents border & padding from affecting height */
     box-sizing: border-box;
     transition: border .3s;
+    background-color: transparent;
+    color: var(--bodyTextColorWhite);
   }
   #cs-contact #cs-form input:hover,
   #cs-contact #cs-form textarea:hover {
     border: 1px solid var(--primary);
+  }
+  #cs-contact #cs-form label::placeholder,
+  #cs-contact #cs-form input::placeholder,
+  #cs-contact #cs-form textarea::placeholder {
+    /* lighten up the color of the text by 40%*/
+    filter: brightness(1.4);
   }
   #cs-contact #cs-form textarea {
     font-family: inherit;
@@ -208,6 +218,7 @@
     left: 0;
     z-index: -1;
     transition: transform .6s;
+    background-color: #000;
   }
   #cs-contact .cs-bg-picture:before {
     /* background color overlay */
@@ -229,6 +240,7 @@
     width: 100%;
     /* Makes img tag act as a background image */
     object-fit: cover;
+    opacity: .5;
   }
 }
 /* Tablet - 700px */
@@ -291,31 +303,5 @@
   }
   #cs-contact .cs-right-section {
     height: 36.125rem;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #cs-contact .cs-text,
-  body.dark-mode #cs-contact .cs-title {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #cs-contact #cs-form label,
-  body.dark-mode #cs-contact #cs-form input,
-  body.dark-mode #cs-contact #cs-form textarea {
-    background-color: transparent;
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #cs-contact #cs-form label::placeholder,
-  body.dark-mode #cs-contact #cs-form input::placeholder,
-  body.dark-mode #cs-contact #cs-form textarea::placeholder {
-    /* lighten up the color of the text by 40%*/
-    filter: brightness(1.4);
-  }
-  body.dark-mode #cs-contact .cs-bg-picture {
-    background-color: #000;
-  }
-  body.dark-mode #cs-contact .cs-bg-picture img {
-    /* lets parent background-color bleed through and darken it */
-    opacity: .5;
   }
 }

@@ -6,4 +6,4 @@ function enableDarkMode() {
 }
 
 // Enable dark mode by default
-enableDarkMode()
+// enableDarkMode()

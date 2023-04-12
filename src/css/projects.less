@@ -127,6 +127,9 @@
             left: 0;
             z-index: -1;
         }
+        &:after {
+            display: none;
+        }
 
         .container {
             text-align: center;
@@ -191,7 +194,7 @@
         &:after {
             content: '';
             position: absolute;
-            display: block;
+            display: none;
             height: 1108/16rem;
             width: 2000/16rem;
             background: url("/assets/svgs/cta-squares.svg");
@@ -225,17 +228,6 @@
                 top: 0;
                 left: 0;
                 z-index: 1;
-            }
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0em) {
-    body.dark-mode {
-        #cta {
-            &:after {
-                display: none;
             }
         }
     }
