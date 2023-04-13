@@ -260,6 +260,14 @@
   #sbs-r .cs-text:last-of-type {
     margin-bottom: 2rem;
   }
+  #sbs-r .cs-text li {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+  #sbs-r .cs-text span {
+    font-weight: bold;
+    text-decoration: underline;
+  }
   #sbs-r .cs-flex-group {
     /* 16px - 32px */
     padding: clamp(1rem, 3vw, 2rem);
@@ -365,7 +373,7 @@
     color: var(--bodyTextColorWhite);
   }
   #reviews .cs-card-group {
-    padding: 0;
+    padding: 2rem;
     /* 48px - 64px */
     margin: 0 auto clamp(3rem, 5vw, 4rem);
   }
