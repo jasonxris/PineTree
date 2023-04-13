@@ -1,109 +1,100 @@
 /*-- -------------------------- -->
-<---          Gallery           -->
+<---           Reviews          -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px - Contains hover animation */
+/* Mobile */
 @media only screen and (min-width: 0em) {
+    #reviews {
+        padding-top: 120/16rem;
+        padding-bottom: 50/16rem;
+        margin: auto;
 
-    #gallery {
-        /* Centers button */
-        text-align: center;
-        padding: var(--sectionPadding);
-        position: relative;
-        /* Prevents overflow from the image going off screen */
-        overflow: hidden;
-        .cs-container {
+        .container {
+            width: 96%;
+            max-width: 1320/16rem;
+        }
+
+        .review {
+            padding: 64/16rem 30/16rem 18/16rem 30/16rem;
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
             width: 100%;
-            max-width: 1322/16em;
+            max-width: 900/16rem;
             margin: auto;
-        }
-
-        .cs-image-group {
-            /* used rem so it doesn't scale with the font size of on parent */
-            font-size:~"min(1.1vw, 1em)";
-            width: 100%;
-            max-width: 1322/16em;
-            padding: 0;
-            margin: 0 auto 60/16rem;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 30/16em;
-        }
-
-        .cs-row {
+            margin-bottom: 100/16rem;
+            border-radius: 5/16rem;
+            position: relative;
+            background: var(--medium);
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 30/16em;
-        }
-
-        .cs-picture {
-            position: relative;
-            display: block;
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .cs-row-1 {
-            .cs-picture-1 {
-                width: 420/16em;
-                height: 567/16em;
+            &:last-of-type {
+                margin-bottom: 0;
             }
 
-            .cs-picture-2 {
-                width: 420/16em;
-                height: 629/16em;
+            p {
+                line-height: 24/18;
+                margin-bottom: 28/16rem;
+                text-align: left;
             }
 
-            .cs-picture-3 {
-                width: 420/16em;
-                height: 512/16em;
-            }
-        }
-
-        .cs-row-2 {
-            .cs-picture-1 {
-                width: 420/16em;
-                height: 492/16em;
+            .example {
+                padding: 100/10rem
             }
 
-            .cs-picture-2 {
-                width: 420/16em;
-                height: 517/16em;
-            }
+            .star-group {
+                border-top: 1px solid #E7E7E7;
+                padding-top: 16/16rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+                margin-top: auto;
 
-            .cs-picture-3 {
-                width: 420/16em;
-                height: 629/16em;
-            }
-        }
+                .name {
+                    color: #fff;
+                    line-height: 24/16rem;
+                    text-align: left;
+                    font-weight: bold;
+                    display: block;
+                }
 
-        .cs-row-3 {
-            .cs-picture-1 {
-                width: 420/16em;
-                height: 625/16em;
-            }
+                .desc {
+                    color: #fff;
+                    font-weight: 400;
+                    display: block;
+                    opacity: .7;
+                }
 
-            .cs-picture-2 {
-                width: 420/16em;
-                height: 452/16em;
-            }
-
-            .cs-picture-3 {
-                width: 420/16em;
-                height: 629/16em;
             }
         }
     }
-}                           
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+
+    #reviews {
+        padding-top: 150/16rem;
+        padding-bottom: 50/16rem;
+        
+        .container {
+            font-size:~"min(1.4vw, 1em)";
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+            column-gap: 30/16rem;
+        }
+
+        .review {
+            margin: 0;
+            margin-bottom: 150/16rem;
+
+            &:last-of-type {
+                margin-bottom: 150/16rem;
+            }
+        }
+    }
+}
 
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
@@ -127,6 +118,7 @@
             left: 0;
             z-index: -1;
         }
+
         &:after {
             display: none;
         }

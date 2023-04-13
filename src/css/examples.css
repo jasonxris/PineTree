@@ -1,87 +1,84 @@
 /*-- -------------------------- -->
-<---          Gallery           -->
+<---           Reviews          -->
 <--- -------------------------- -*/
-/* Mobile - 360px - Contains hover animation */
+/* Mobile */
 @media only screen and (min-width: 0em) {
-  #gallery {
-    /* Centers button */
-    text-align: center;
-    padding: var(--sectionPadding);
-    position: relative;
-    /* Prevents overflow from the image going off screen */
-    overflow: hidden;
-  }
-  #gallery .cs-container {
-    width: 100%;
-    max-width: 82.625em;
+  #reviews {
+    padding-top: 7.5rem;
+    padding-bottom: 3.125rem;
     margin: auto;
   }
-  #gallery .cs-image-group {
-    /* used rem so it doesn't scale with the font size of on parent */
-    font-size: min(1.1vw, 1em);
-    width: 100%;
-    max-width: 82.625em;
-    padding: 0;
-    margin: 0 auto 3.75rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.875em;
+  #reviews .container {
+    width: 96%;
+    max-width: 82.5rem;
   }
-  #gallery .cs-row {
+  #reviews .review {
+    padding: 4rem 1.875rem 1.125rem 1.875rem;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 56.25rem;
+    margin: auto;
+    margin-bottom: 6.25rem;
+    border-radius: 0.3125rem;
+    position: relative;
+    background: var(--medium);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.875em;
   }
-  #gallery .cs-picture {
-    position: relative;
+  #reviews .review:last-of-type {
+    margin-bottom: 0;
+  }
+  #reviews .review p {
+    line-height: 1.33333333;
+    margin-bottom: 1.75rem;
+    text-align: left;
+  }
+  #reviews .review .example {
+    padding: 10rem;
+  }
+  #reviews .review .star-group {
+    border-top: 1px solid #E7E7E7;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: auto;
+  }
+  #reviews .review .star-group .name {
+    color: #fff;
+    line-height: 1.5rem;
+    text-align: left;
+    font-weight: bold;
     display: block;
   }
-  #gallery .cs-picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  #reviews .review .star-group .desc {
+    color: #fff;
+    font-weight: 400;
+    display: block;
+    opacity: .7;
   }
-  #gallery .cs-row-1 .cs-picture-1 {
-    width: 26.25em;
-    height: 35.4375em;
+}
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #reviews {
+    padding-top: 9.375rem;
+    padding-bottom: 3.125rem;
   }
-  #gallery .cs-row-1 .cs-picture-2 {
-    width: 26.25em;
-    height: 39.3125em;
+  #reviews .container {
+    font-size: min(1.4vw, 1em);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    column-gap: 1.875rem;
   }
-  #gallery .cs-row-1 .cs-picture-3 {
-    width: 26.25em;
-    height: 32em;
+  #reviews .review {
+    margin: 0;
+    margin-bottom: 9.375rem;
   }
-  #gallery .cs-row-2 .cs-picture-1 {
-    width: 26.25em;
-    height: 30.75em;
-  }
-  #gallery .cs-row-2 .cs-picture-2 {
-    width: 26.25em;
-    height: 32.3125em;
-  }
-  #gallery .cs-row-2 .cs-picture-3 {
-    width: 26.25em;
-    height: 39.3125em;
-  }
-  #gallery .cs-row-3 .cs-picture-1 {
-    width: 26.25em;
-    height: 39.0625em;
-  }
-  #gallery .cs-row-3 .cs-picture-2 {
-    width: 26.25em;
-    height: 28.25em;
-  }
-  #gallery .cs-row-3 .cs-picture-3 {
-    width: 26.25em;
-    height: 39.3125em;
+  #reviews .review:last-of-type {
+    margin-bottom: 9.375rem;
   }
 }
 /*-- -------------------------- -->

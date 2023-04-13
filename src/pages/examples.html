@@ -1,16 +1,15 @@
 ---
 layout: 'base.html'
 description: 'Meta description for the page'
-metaTitle: 'Title that shows up on google searches'
-tagTitle: 'Wxamples'
+metaTitle: 'Title that shows up on OG social Media Title Tag'
+tagTitle: 'Examples'
 preloadImg: '/images/cabinets2-1920w.webp'
-preloadCSS: '/css/examples.css'
+preloadCSS: '/css/reviews.css'
 permalink: 'examples/'
 eleventyNavigation:
     key: Examples
-    order: 300
+    order: 400
 ---
-
 <!-- Enter html code below -->
 
 <!-- ============================================ -->
@@ -18,42 +17,66 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="int-hero">
-  <h1 id="home-h">Examples</h1>
+  <h1 id="home-h">Past Deals</h1>
   {% image './src/images/cabinets2.jpg', 'cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
-
 </section>
 
 <!-- ============================================ -->
-<!--                   Gallery                    -->
+<!--                  Reviews                     -->
 <!-- ============================================ -->
 
-<section id="gallery">
-  <div class="cs-container">
-    <div class="cs-image-group">
-      <!-- Row 1-->
-      <div class="cs-row cs-row-1">
-        {% image './src/images/portfolio/port1.jpg', 'new hallway', 'cs-picture cs-picture-1', 'lazy', '(max-width: 600px) 200px, 400px'%}
-        {% image './src/images/portfolio/port4.jpg', 'new home construction', 'cs-picture cs-picture-2', 'lazy', '(max-width: 600px) 200px, 400px'%}
-        {% image './src/images/portfolio/port7.jpg', 'building a new wall', 'cs-picture cs-picture-3', 'lazy', '(max-width: 600px) 200px, 400px'%}
-        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+<section id="reviews">
+  <div class="container">
+    <div class="review">
+      <div class="example">
+        [replace with photo]
       </div>
-      <!-- Row 2 -->
-      <div class="cs-row cs-row-2">
-        {% image './src/images/portfolio/port2.jpg', 'new kitchen', 'cs-picture cs-picture-1', 'lazy', '(max-width: 600px) 200px, 400px'%}
-        {% image './src/images/portfolio/port5.jpg', 'apartment addition', 'cs-picture cs-picture-2', 'lazy', '(max-width: 600px) 200px, 400px'%}
-        {% image './src/images/portfolio/port8.jpg', 'kew kitchen cabinets', 'cs-picture cs-picture-3', 'lazy', '(max-width: 600px) 200px, 400px'%}
-        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-      </div>
-      <!-- Row 3 -->
-      <div class="cs-row cs-row-3">
-        {% image './src/images/portfolio/port3.jpg', 'new kitchen', 'cs-picture cs-picture-1', 'lazy', '(max-width: 600px) 200px, 400px'%}
-        {% image './src/images/portfolio/port6.jpg', 'apartment addition', 'cs-picture cs-picture-2', 'lazy', '(max-width: 600px) 200px, 400px'%}
-        {% image './src/images/portfolio/port9.jpg', 'kew kitchen cabinets', 'cs-picture cs-picture-3', 'lazy', '(max-width: 600px) 200px, 400px'%}
-
-        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+      <p> April 12, 2023</p>
+      <p>Closed a home appraised at $502,000 in Fresno, CA. It is a second home that was purchased from a forclosure auction.</p>
+      <div class="star-group">
+        <span class="name">Loan amount: $326,000<span class="desc">Term: 3 years at 10% interest</span><span class="desc">Loan to Value: 65% </span></span>
       </div>
     </div>
-    <a href="/contact" class="button-solid">Get Free Quote</a>
+    <div class="review">
+      <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
+                </p>
+      <div class="star-group">
+        <span class="name">Vincent M.<span class="desc">Homeowner</span></span>
+      </div>
+    </div>
+    <div class="review">
+      <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
+                </p>
+      <div class="star-group">
+        <span class="name">Alex L.<span class="desc">Homeowner</span></span>
+      </div>
+    </div>
+    <div class="review">
+      <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
+                </p>
+      <div class="star-group">
+        <span class="name">Arrieana M.<span class="desc">Homeowner</span></span>
+      </div>
+    </div>
+    <div class="review">
+      <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
+                </p>
+      <div class="star-group">
+        <span class="name">Leo N.<span class="desc">Homeowner</span></span>
+      </div>
+    </div>
+    <div class="review">
+      <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
+                </p>
+      <div class="star-group">
+        <span class="name">Brian A.<span class="desc">Homeowner</span></span>
+      </div>
+    </div>
   </div>
 </section>
 
