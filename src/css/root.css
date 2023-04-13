@@ -689,7 +689,7 @@
     padding: 0;
   }
   #footer .left-section {
-    width: 25.5625rem;
+    width: 31.25rem;
     margin: 0;
     text-align: left;
   }
@@ -697,10 +697,14 @@
     text-align: left;
     margin-left: 0;
     height: 4.375rem;
+    width: 100%;
   }
+  #footer .left-section .logo img {
+    width: 100%;
+  }
+  #footer .left-section h3,
   #footer .left-section p {
-    text-align: left;
-    margin-left: 0;
+    text-align: center;
   }
   #footer .right-section {
     margin: 0;
