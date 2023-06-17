@@ -45,29 +45,29 @@ eleventyNavigation:
   </div>
 </section>
 
-
-<section id="sbs-r">
+<section id="profile-display">
+  <h1>Our Brokers</h1>
   <div class="cs-container">
-
-    {# Update this so that the image is smaller #}
-    <div class="cs-left">
-      {% image './src/images/tangee.jpg', 'house', 'cs-picture cs-picture1', 'lazy'%}
-      {% image './src/images/Portrait1.jpg', 'house', 'cs-picture cs-picture2', 'lazy'%}
-
-    </div>
     <!-- Right Content Section-->
     <div class="cs-right">
-      <span class="cs-topper">Brokers</span>
-      <h2 class="cs-title">Helder and Tangee Pinheiro</h2>
-      <p class="cs-text">
-        Something about Helders experience in realestate + other stuff that lends credibility
-      </p>
-      <p class="cs-text">
-        Something about Tangees experience in rel estate + other things that lends credibiltiy
-      </p>
+      <div class="profile">
+        <div class="profile-picture">{% image './src/images/tangee.jpg', 'lazy'%}</div>
+        <h3 >Tangee Pinheiro</h3>
+        <p class="profile-text">
+          Something about Helders experience in realestate + other stuff that lends credibility
+        </p>
+      </div>
+      <div class="profile">
+        <div class="profile-picture">{% image './src/images/Portrait1.jpg', 'lazy'%}</div>
+        <h3 >Helder Pinheiro</h3>
+        <p class="profile-text">
+          Something about Helders experience in realestate + other stuff that lends credibility
+        </p>
+      </div>
     </div>
   </div>
 </section>
+
 
 <!-- ============================================ -->
 <!--             Final Call to Action             -->

@@ -3,10 +3,19 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
-  #sbs-r {
+  #profile-display {
     padding: var(--sectionPadding);
   }
-  #sbs-r .cs-container {
+  #profile-display h1 {
+    font-size: var(--headerFontSize);
+    line-height: 1.2em;
+    text-align: center;
+    max-width: 50rem;
+    margin: 0 auto 1rem;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #profile-display .cs-container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
@@ -16,7 +25,7 @@
     flex-direction: column;
     row-gap: 2.5rem;
   }
-  #sbs-r .cs-left {
+  #profile-display .cs-left {
     /* scaling the font size with the view width */
     font-size: min(2.31vw, .7em);
     /* using ems so we can use font size to scale the whole section */
@@ -24,17 +33,17 @@
     height: 39.75em;
     position: relative;
   }
-  #sbs-r .cs-left:before,
-  #sbs-r .cs-left:after {
+  #profile-display .cs-left:before,
+  #profile-display .cs-left:after {
     background: var(--accent);
   }
-  #sbs-r .cs-picture {
+  #profile-display .cs-picture {
     /* clips img tag corners */
     overflow: hidden;
     position: absolute;
     display: block;
   }
-  #sbs-r .cs-picture img {
+  #profile-display .cs-picture img {
     position: absolute;
     top: 0;
     left: 0;
@@ -43,13 +52,13 @@
     /* makes image act like a background image */
     object-fit: cover;
   }
-  #sbs-r .cs-picture1 {
+  #profile-display .cs-picture1 {
     width: 32.625em;
     height: 36.3125em;
     right: 0;
     top: 0;
   }
-  #sbs-r .cs-picture2 {
+  #profile-display .cs-picture2 {
     width: 25.875em;
     height: 25em;
     background-color: var(--dark);
@@ -59,11 +68,10 @@
     left: 0;
     bottom: 0;
   }
-  #sbs-r .cs-right {
+  #profile-display .cs-right {
     margin: auto;
-    max-width: 33.875rem;
   }
-  #sbs-r .cs-topper {
+  #profile-display .cs-topper {
     font-size: var(--topperFontSize);
     line-height: 1.2em;
     text-transform: uppercase;
@@ -74,7 +82,7 @@
     margin-bottom: 0.25rem;
     display: block;
   }
-  #sbs-r .cs-title {
+  #profile-display .cs-title {
     font-size: var(--headerFontSize);
     font-weight: 900;
     line-height: 1.2em;
@@ -84,7 +92,7 @@
     color: var(--bodyTextColorWhite);
     position: relative;
   }
-  #sbs-r .cs-text {
+  #profile-display .cs-text {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
     text-align: left;
@@ -94,24 +102,24 @@
     margin-bottom: 1rem;
     color: var(--bodyTextColorWhite);
   }
-  #sbs-r .cs-text:last-of-type {
+  #profile-display .cs-text:last-of-type {
     margin-bottom: 2rem;
   }
-  #sbs-r .cs-flex-group {
+  #profile-display .cs-flex-group {
     /* 16px - 32px */
     padding: clamp(1rem, 3vw, 2rem);
     background-color: var(--accent);
     border-radius: 1rem;
     position: relative;
   }
-  #sbs-r .cs-flex-p {
+  #profile-display .cs-flex-p {
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     line-height: 1.5em;
     margin: 0 0 1rem;
     color: var(--bodyTextColorWhite);
   }
-  #sbs-r .cs-name {
+  #profile-display .cs-name {
     font-size: 1rem;
     line-height: 1.2em;
     text-transform: uppercase;
@@ -120,13 +128,13 @@
     color: var(--bodyTextColorWhite);
     display: block;
   }
-  #sbs-r .cs-job {
+  #profile-display .cs-job {
     font-size: 0.875rem;
     line-height: 1.5em;
     color: #767676;
     display: block;
   }
-  #sbs-r .cs-quote-icon {
+  #profile-display .cs-quote-icon {
     /* 60px - 136px */
     width: clamp(3.75rem, 10vw, 8.5rem);
     height: auto;
@@ -135,6 +143,38 @@
     /* 16px - 32px */
     right: clamp(1rem, 4vw, 2rem);
     opacity: .2;
+  }
+  #profile-display .profile {
+    flex: 0 0 calc(30%);
+    margin-bottom: 20px;
+    min-width: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #profile-display .profile .profile-picture {
+    display: inline-block;
+    padding-left: auto;
+    padding-right: auto;
+  }
+  #profile-display .profile h3 {
+    min-width: 6em;
+    font-size: xx-large;
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    margin: 1rem auto 1rem;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #profile-display .profile img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 1.5em;
+  }
+  #profile-display .profile p {
+    text-align: center;
   }
   #sbs {
     padding: var(--sectionPadding);
@@ -279,20 +319,65 @@
   }
 }
 /* Desktop - 1024px */
-@media only screen and (min-width: 64em) {
-  #sbs-r .cs-container {
+@media only screen and (min-width: 48em) {
+  #profile-display h1 {
+    font-size: var(--headerFontSize);
+    line-height: 1.2em;
+    text-align: center;
+    max-width: 50rem;
+    margin: 0 auto 1rem;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #profile-display .cs-container {
     flex-flow: row;
     justify-content: space-between;
     gap: 3.25rem;
   }
-  #sbs-r .cs-left {
+  #profile-display .cs-left {
     font-size: min(1.2vw, 1em);
     flex: none;
     /* sends it to the right */
     order: 2;
   }
-  #sbs-r .cs-right {
+  #profile-display .cs-right {
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 40px;
+  }
+  #profile-display .profile {
+    flex: 0 0 calc(30%);
+    margin-bottom: 20px;
+    min-width: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #profile-display .profile .profile-picture {
+    display: inline-block;
+    padding-left: auto;
+    padding-right: auto;
+  }
+  #profile-display .profile h3 {
+    min-width: 6em;
+    font-size: xx-large;
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    margin: 1rem auto 1rem;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #profile-display .profile img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 1.5em;
+  }
+  #profile-display .profile p {
+    text-align: center;
   }
   #sbs .cs-container {
     flex-flow: row;

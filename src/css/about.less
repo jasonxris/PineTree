@@ -5,7 +5,18 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
 
-    #sbs-r {
+    #profile-display {
+
+        h1 {
+            font-size: var(--headerFontSize);
+            line-height: 1.2em;
+            text-align: center;
+            max-width: 800/16rem;
+            margin: 0 auto 16/16rem;
+            color: var(--bodyTextColorWhite);
+            position: relative;
+        }
+
         padding: var(--sectionPadding);
 
         .cs-container {
@@ -67,7 +78,7 @@
 
         .cs-right {
             margin: auto;
-            max-width: 542/16rem;
+            // max-width: 542/16rem;
         }
 
         .cs-topper {
@@ -149,6 +160,39 @@
             /* 16px - 32px */
             right: clamp(1rem, 4vw, 2rem);
             opacity: .2;
+        }
+
+        .profile {
+            flex: 0 0 calc(50% - 20px); // Add this line, 50% is the width of each profile, 20px is half of the gap between profiles
+            margin-bottom: 20px; // Add this line, set the vertical gap between profiles
+            min-width: 20em;
+            display: flex; // Add this line
+            flex-direction: column; // Add this line
+            align-items: center; // Add this line
+            .profile-picture {
+                display: inline-block;
+                padding-left: auto;
+                padding-right: auto;
+            }
+            h3 {
+                min-width: 6em;
+                font-size: xx-large;
+                font-weight: 900;
+                line-height: 1.2em;
+                text-align: center;
+                margin: 16/16rem auto 16/16rem;
+                color: var(--bodyTextColorWhite);
+                position: relative;
+            }
+            img {
+                width: 200px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 24/16em;
+            }
+            p {
+                text-align: center;
+            }
         }
     }
 
@@ -312,8 +356,17 @@
 }
 
 /* Desktop - 1024px */
-@media only screen and (min-width: 64em) {
-    #sbs-r {
+@media only screen and (min-width: 48em) {
+    #profile-display {
+        h1 {
+            font-size: var(--headerFontSize);
+            line-height: 1.2em;
+            text-align: center;
+            max-width: 800/16rem;
+            margin: 0 auto 16/16rem;
+            color: var(--bodyTextColorWhite);
+            position: relative;
+        }
         .cs-container {
             flex-flow: row;
             justify-content: space-between;
@@ -329,6 +382,43 @@
 
         .cs-right {
             margin: 0;
+            display: flex; // Add this line
+            flex-wrap: wrap; // Add this line
+            justify-content: space-evenly; // Add this line
+            padding: 0 40px; // Add this line to add space between profiles and the edge of the website
+        }
+
+        .profile {
+            flex: 0 0 calc(50% - 20px); // Add this line, 50% is the width of each profile, 20px is half of the gap between profiles
+            margin-bottom: 20px; // Add this line, set the vertical gap between profiles
+            min-width: 20em;
+            display: flex; // Add this line
+            flex-direction: column; // Add this line
+            align-items: center; // Add this line
+            .profile-picture {
+                display: inline-block;
+                padding-left: auto;
+                padding-right: auto;
+            }
+            h3 {
+                min-width: 6em;
+                font-size: xx-large;
+                font-weight: 900;
+                line-height: 1.2em;
+                text-align: center;
+                margin: 16/16rem auto 16/16rem;
+                color: var(--bodyTextColorWhite);
+                position: relative;
+            }
+            img {
+                width: 200px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 24/16em;
+            }
+            p {
+                text-align: center;
+            }
         }
     }
     #sbs {
