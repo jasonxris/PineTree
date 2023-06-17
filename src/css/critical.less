@@ -366,14 +366,16 @@
 @media only screen and (min-width: 768px) {
     .services {
         font-size:~"min(1.8vw, 1em)";
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 98%;
 
-        .card {
-            margin: 0;
-            max-width: 325/16em;
+        width: 98%;
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .card {
+                margin: 0;
+                max-width: 325/16em;
+            }
         }
     }
 }
@@ -387,4 +389,10 @@
             max-width: 357/16em;
         }
     }
+}
+
+.services-title {
+    text-align: center;
+    padding-bottom: .8em;
+    font-size: clamp(2.4375rem, 6.40vw, 3.8125rem);
 }

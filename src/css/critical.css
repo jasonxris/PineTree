@@ -332,12 +332,14 @@
 @media only screen and (min-width: 768px) {
   .services {
     font-size: min(1.8vw, 1em);
+    width: 98%;
+  }
+  .services .cards {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 98%;
   }
-  .services .card {
+  .services .cards .card {
     margin: 0;
     max-width: 20.3125em;
   }
@@ -350,4 +352,9 @@
   .services .card {
     max-width: 22.3125em;
   }
+}
+.services-title {
+  text-align: center;
+  padding-bottom: .8em;
+  font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
 }
