@@ -8,13 +8,14 @@
     #profile-display {
 
         h1 {
-            font-size: var(--headerFontSize);
+            font-size:~"min(12vw, 3rem)";
             line-height: 1.2em;
             text-align: center;
             max-width: 800/16rem;
             margin: 0 auto 16/16rem;
             color: var(--bodyTextColorWhite);
             position: relative;
+            margin-bottom: .7em;
         }
 
         padding: var(--sectionPadding);
@@ -164,7 +165,7 @@
 
         .profile {
             flex: 0 0 calc(50% - 20px); // Add this line, 50% is the width of each profile, 20px is half of the gap between profiles
-            margin-bottom: 20px; // Add this line, set the vertical gap between profiles
+            margin-bottom: 80px; // Add this line, set the vertical gap between profiles
             min-width: 20em;
             display: flex; // Add this line
             flex-direction: column; // Add this line
